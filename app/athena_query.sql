@@ -1,18 +1,20 @@
 SELECT
-  time,
-  latitude,
-  longitude,
-  depth,
-  mag,
-  magType,
-  place,
-  type,
-  status,
-  tsunami,
-  sig,
-  net,
-  id
+id,
+magnitude,
+place,
+time_utc,
+latitude,
+longitude,
+depth_km,
+status,
+type,
+tsunami,
+alert,
+year,
+month,
+day
+
 FROM
   batch_data_demo.earthquakes
 ORDER BY
-  time DESC
+  time_utc DESC
