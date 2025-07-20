@@ -18,7 +18,7 @@ def render_dashboard(df: pd.DataFrame):
     st.map(filtered_df[['latitude', 'longitude']])
 
     # Chart
-    st.bar_chart(filtered_df['mag'])
+    st.bar_chart(filtered_df['magnitude'])
 
     # Table
     st.dataframe(filtered_df)
