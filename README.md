@@ -34,7 +34,7 @@ This project demonstrates a modern, low-cost, serverless data pipeline and dashb
 
 ---
 
-## 🚀 Run Locally 
+## Run Locally 
 - NOTE: this is only a demo guide, requires real data source, in my case, another project I made before.
 
 ### 1. Clone the repo
@@ -72,21 +72,21 @@ export AWS_DEFAULT_REGION=eu-central-1
 streamlit run streamlit_app.py
 ```
 
-### 🧠 Insights Engine
+### Insights Engine
 
-The dashboard answers questions like:
+#### The dashboard answers questions like:
 
-    Where and when did earthquakes occur?
+ - Where and when did earthquakes occur?
 
-    Which areas had significant magnitudes recently?
+ - Which areas had significant magnitudes recently?
 
-    How often do tsunami threats occur?
+ - How often do tsunami threats occur?
 
-    What’s the day-by-day trend in seismic activity?
+ - What’s the day-by-day trend in seismic activity?
 
 All without re-querying AWS unless needed.
 
-📁 Folder Structure
+## Folder Structure
 ```bash
 .
 ├── app/
