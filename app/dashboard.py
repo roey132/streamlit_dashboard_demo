@@ -20,7 +20,7 @@ def render_dashboard(df: pd.DataFrame):
         show_tsunami_only = st.checkbox("Show Only Tsunami Events", value=False)
 
     # Filter data
-    start_date, end_date = pd.to_datetime(date_range[0]), pd.to_datetime(date_range[1])
+    start_date, end_date = pd.to_datetime(date_range[0]), pd.to_datetime(date_range[1] + pd.Timedelta(days=1))
     filtered_df = df[
         (df['time_utc'] >= start_date) &
         (df['time_utc'] <= end_date) &
