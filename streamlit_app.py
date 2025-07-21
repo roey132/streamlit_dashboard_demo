@@ -1,6 +1,6 @@
 import os
 import time
-from app.data_loader import run_athena_query
+from app.data_loader import run_or_reuse_athena_query
 from app.dashboard import render_dashboard
 
 import streamlit as st
@@ -26,7 +26,7 @@ def main():
 
     try:
         query = load_sql_query(QUERY_PATH)
-        df = run_athena_query(query, DATABASE, OUTPUT_S3, REGION)
+        df = run_or_reuse_athena_query(query)
         message.success("✅ Data loaded successfully.")
         time.sleep(2)  # show success briefly
         message.empty()
