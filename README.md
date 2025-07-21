@@ -1,12 +1,12 @@
 # 🌍 Earthquake Data Dashboard (AWS Athena + Streamlit)
 
-This project demonstrates a modern, low-cost, serverless data pipeline and dashboard for global earthquake monitoring. It fetches live earthquake data daily via API, stores it in AWS S3, and visualizes it using Streamlit powered by Athena queries.
+This project demonstrates a modern, low-cost, serverless data pipeline and dashboard for global earthquake monitoring. It fetches batched earthquake data daily via API, stores it in AWS S3, and visualizes it using Streamlit powered by Athena queries.
 
-> ✅ Ideal for showcasing cloud data workflows, Athena querying, and Streamlit dashboards with live filters and insights.
+ - Ideal for showcasing cloud data workflows, Athena querying, and Streamlit dashboards with live filters and insights.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **AWS S3** – stores daily ingested earthquake data as raw files
 - **AWS Athena** – serverless SQL engine to query data directly from S3
@@ -16,25 +16,26 @@ This project demonstrates a modern, low-cost, serverless data pipeline and dashb
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
 - ⚡ **Live interactive dashboard**
-- 📅 Filter by date and magnitude range
-- 🌊 Highlight tsunami-related events
-- 📊 Visual insights: daily trends, severity breakdown, map view
-- 📥 Download filtered dataset as CSV
-- ✅ Smart Athena query reuse (no redundant executions within 2 hours)
-- 💸 Minimal cost (serverless, cache-aware)
+- Filter by date and magnitude range
+- Highlight tsunami-related events
+- Visual insights: daily trends, severity breakdown, map view
+- Download filtered dataset as CSV
+- Smart Athena query reuse (no redundant executions within 2 hours)
+- Minimal cost (serverless, cache-aware)
 
 ---
 
-## 📸 Preview
+## Live Demo
 
-![dashboard-preview](assets/dashboard-screenshot.png)
+- https://dashboarddemoapp.streamlit.app/
 
 ---
 
-## 🚀 Run Locally
+## 🚀 Run Locally 
+- NOTE: this is only a demo guide, requires real data source, in my case, another project I made before.
 
 ### 1. Clone the repo
 
@@ -98,6 +99,5 @@ All without re-querying AWS unless needed.
 ├── README.md
 ```
 
-📬 Contact
-
 Created by Roey Aharonov.
+Date - 21/07/2025

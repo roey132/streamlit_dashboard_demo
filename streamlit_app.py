@@ -5,11 +5,6 @@ from app.dashboard import render_dashboard
 
 import streamlit as st
 
-# === Configuration ===
-DATABASE = "batch_data_demo"  # <-- replace with your Athena database name
-OUTPUT_S3 = "s3://batch-data-demo-euc1/athena-queries/"  # <-- must exist and be writable
-REGION = "eu-central-1"
-
 # === Load SQL Query ===
 QUERY_PATH = "app/athena_query.sql"
 
