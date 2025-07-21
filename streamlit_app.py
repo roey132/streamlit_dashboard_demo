@@ -1,4 +1,5 @@
 import os
+import time
 from app.data_loader import run_athena_query
 from app.dashboard import render_dashboard
 
@@ -19,16 +20,19 @@ def load_sql_query(filepath: str) -> str:
 # === Run Application ===
 def main():
     st.set_page_config(page_title="Earthquake Dashboard", layout="wide")
-    st.info("⏳ Loading data from AWS Athena...")
+
+    message = st.empty()
+    message.info("⏳ Loading data from AWS Athena...")
 
     try:
         query = load_sql_query(QUERY_PATH)
         df = run_athena_query(query, DATABASE, OUTPUT_S3, REGION)
-        st.success("✅ Data loaded successfully.")
+        message.success("✅ Data loaded successfully.")
+        time.sleep(2)  # show success briefly
+        message.empty()
         render_dashboard(df)
     except Exception as e:
-        st.error("❌ Failed to load data.")
+        message.error("❌ Failed to load data.")
         st.exception(e)
-
 if __name__ == "__main__":
     main()
